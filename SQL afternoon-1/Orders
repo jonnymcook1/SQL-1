@@ -1,0 +1,23 @@
+Orders Table
+
+CREATE TABLE orders (
+  product_id SERIAL,
+  product_name VARCHAR(100),
+  product_price NUMERIC,
+  quanity INTEGER
+)
+
+INSERT INTO orders (product_name, product_price, quanity)
+
+VALUES ('phone', 300.00, 100),
+('computer', 500.00, 80);
+
+SELECT * FROM orders
+
+SELECT SUM(quanity) FROM orders
+
+SELECT SUM(product_price) FROM orders
+
+SELECT SUM(product_price * quanity) FROM orders
+WHERE product_id = 0
+// made a product_id and not person_id
